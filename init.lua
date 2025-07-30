@@ -61,7 +61,6 @@ Plug('jakemason/ouroboros')
 Plug('windwp/nvim-autopairs') -- auto insert {} and ''
 Plug('esensar/nvim-dev-container') -- Dev container support
 
-
 vim.call('plug#end')
 
 
@@ -93,4 +92,5 @@ require("plugins.ouroboros")
 require("plugins.notify")
 require("plugins.autopair")
 require("plugins.wilder")
+require("plugins.simpleNote")
 end, 100)
