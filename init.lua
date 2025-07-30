@@ -55,7 +55,7 @@ Plug('nvim-lua/plenary.nvim')
 Plug('jakemason/ouroboros')
 
 --misc
-
+Plug('windwp/nvim-autopairs')
 
 
 vim.call('plug#end')
@@ -86,4 +86,5 @@ require("plugins.session")
 require("plugins.conform")
 require("plugins.ouroboros")
 require("plugins.notify")
+require("plugins.autopair")
 end, 100)
