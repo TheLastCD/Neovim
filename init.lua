@@ -38,6 +38,9 @@ Plug('cshuaimin/ssr.nvim') -- Search and Replace
 Plug('nmac427/guess-indent.nvim') -- identation
 Plug('folke/persistence.nvim') -- Session Managment
 Plug('rcarriga/nvim-notify')
+Plug('gelguy/wilder.nvim')
+
+
 
 --lsp
 Plug('stevearc/conform.nvim')
@@ -55,7 +58,8 @@ Plug('nvim-lua/plenary.nvim')
 Plug('jakemason/ouroboros')
 
 --misc
-Plug('windwp/nvim-autopairs')
+Plug('windwp/nvim-autopairs') -- auto insert {} and ''
+Plug('esensar/nvim-dev-container') -- Dev container support
 
 
 vim.call('plug#end')
@@ -67,6 +71,7 @@ require("config.autocmd")
 
 require("plugins.mason")
 require("plugins.lsp")
+require("plugins.devContainer")
 
 vim.defer_fn(function()
 		--defer non-essential configs,
@@ -87,4 +92,5 @@ require("plugins.conform")
 require("plugins.ouroboros")
 require("plugins.notify")
 require("plugins.autopair")
+require("plugins.wilder")
 end, 100)

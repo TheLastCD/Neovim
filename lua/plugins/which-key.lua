@@ -22,8 +22,12 @@ wk.add({
 {"<leader>cl", desc = "Code Lint"},
 {"<leader>ch", desc = "Code Goto Header"},
 
+--Git
+{"<leader>Gb", desc = "Git Blame"},
+{"<leader>Gd", desc = "Git Diff"},
+
 --Misc
-{"<leaderM>", desc = "Lsp"},
+{"<leader>M", desc = "Lsp"},
 { "<leader>z", desc = "terminal" },
 { "<leader>s", desc = "Search & Replace" },
 { "<leader>Q", desc = "persistence sessions"},

@@ -65,6 +65,10 @@ vim.keymap.set('n', 'gr', function()
   require('fzf-lua').lsp_references()
 end, { noremap = true, silent = true, desc = "Show LSP References (fzf-lua)" })
 
+-- Git
+map('n', '<leader>Gb', ":Gitsigns blame-line<CR>") --blame line
+map('n', '<leader>Gd', ":Gitsigns diffthis<CR>") -- diff
+
 --Misc
 map('n', '<leader>s', ":lua require('ssr').open()<CR>") --Search and Replace
 
