@@ -64,7 +64,6 @@ vim.call('plug#end')
 require("config.mappings")
 require("config.theme")
 require("config.autocmd")
-require("config.subs")
 
 require("plugins.mason")
 require("plugins.lsp")
