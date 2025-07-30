@@ -14,7 +14,7 @@ wk.add({
 {"<leader>Fr", desc = "Resume Search"},
 {"<leader>Fh", desc = "Search Home"},
 {"<leader>Fl", desc = "Search nvim"},
-{ "<leader>Fg", desc = "Grep (Not Live)" },
+{ "<leader>Fg", desc = "Grep" },
 
 -- code
 {"<leader>c", desc = "Code actions"},
@@ -26,7 +26,8 @@ wk.add({
 {"<leaderM>", desc = "Lsp"},
 { "<leader>z", desc = "terminal" },
 { "<leader>s", desc = "Search & Replace" },
-{ "<leader>Q", desc = "persistence sessions"}
+{ "<leader>Q", desc = "persistence sessions"},
+{ "<leader>R", desc = "Registry" }
 
 })
 

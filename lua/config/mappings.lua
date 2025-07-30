@@ -24,6 +24,11 @@ map("n", "<leader>Fg", ":lua require('fzf-lua').grep()<CR>") --grep
 map('n', '<leader><leader>', ":lua require('fzf-lua').buffers()<CR>")
 map('n', '<leader>M', ":Mason<CR>")
 
+
+-- Register
+map("n", "<leader>R", ":registers<CR>") --show registers
+
+
 -- Terminal
 map('n', '<leader>z', ":lua require('FTerm').open()<CR>") --open term
 map('t', '<Esc>', '<C-\\><C-n><CMD>lua require("FTerm").close()<CR>') --preserves session
