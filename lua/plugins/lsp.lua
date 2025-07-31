@@ -34,7 +34,7 @@ end
 
 vim.diagnostic.config({
   virtual_text = {
-    prefix = '●',  -- change diagnostic inline prefix icon
+    prefix = '● ',  -- change diagnostic inline prefix icon
     spacing = 4,   -- spacing between text and prefix
   }, -- enable virtual text (inline error messages)
   signs = true,          -- show signs in the gutter

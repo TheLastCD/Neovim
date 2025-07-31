@@ -39,7 +39,7 @@ Plug('nmac427/guess-indent.nvim') -- identation
 Plug('folke/persistence.nvim') -- Session Managment
 Plug('rcarriga/nvim-notify')
 Plug('gelguy/wilder.nvim')
-
+Plug('alec-gibson/nvim-tetris')
 
 
 --lsp
@@ -60,6 +60,11 @@ Plug('jakemason/ouroboros')
 --misc
 Plug('windwp/nvim-autopairs') -- auto insert {} and ''
 Plug('esensar/nvim-dev-container') -- Dev container support
+-- Plug('TheLastCD/simple-note.nvim')
+--
+local local_plugin_path = vim.fn.expand('~/git/personal/simple-note.nvim')
+vim.opt.runtimepath:append(local_plugin_path)
+
 
 vim.call('plug#end')
 
@@ -92,5 +97,5 @@ require("plugins.ouroboros")
 require("plugins.notify")
 require("plugins.autopair")
 require("plugins.wilder")
-require("plugins.simpleNote")
+require("plugins.notes")
 end, 100)
