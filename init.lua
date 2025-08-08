@@ -20,51 +20,59 @@ vim.g.start_time = vim.fn.reltime()
 vim.loader.enable()
 vim.call('plug#begin')
 
+
+--UI & popups
 Plug('ellisonleao/gruvbox.nvim', { ['as'] = 'gruvbox' }) --colorscheme
 Plug('nvim-tree/nvim-web-devicons') --pretty icons
 Plug('folke/which-key.nvim') --mappings popup
 Plug('ibhagwan/fzf-lua') --fuzzy finder and grep
-Plug('nvim-treesitter/nvim-treesitter') --syntax highlight
-Plug('ron-rs/ron.vim') --ron highlighter
-Plug('lewis6991/gitsigns.nvim') --git
-Plug('mfussenegger/nvim-lint') --linter
-Plug('neovim/nvim-lspconfig') -- lsp config
-Plug('saghen/blink.cmp') --code complete
 Plug('L3MON4D3/LuaSnip') --snippets
+Plug('rcarriga/nvim-notify') --better Notifcation bubbles
 Plug('MeanderingProgrammer/render-markdown.nvim') --md renderer
 Plug('numToStr/FTerm.nvim') --terminal
 Plug('nvim-lualine/lualine.nvim') --Status Line
-Plug('cshuaimin/ssr.nvim') -- Search and Replace
-Plug('nmac427/guess-indent.nvim') -- identation
-Plug('folke/persistence.nvim') -- Session Managment
-Plug('rcarriga/nvim-notify')
-Plug('gelguy/wilder.nvim')
-Plug('alec-gibson/nvim-tetris')
+Plug('gelguy/wilder.nvim') --Better WildMenu
+Plug('j-hui/fidget.nvim') --UI for LSP Progress
+
+--highlighting
+Plug('nvim-treesitter/nvim-treesitter') --syntax highlight
+Plug('ron-rs/ron.vim') --ron highlighter
 
 
---lsp
+--lsp & Linting
 Plug('stevearc/conform.nvim')
 Plug('mason-org/mason.nvim')
 Plug('mason-org/mason-lspconfig.nvim')
 Plug("zeioth/none-ls-autoload.nvim")
 Plug("nvimtools/none-ls.nvim")
-Plug('j-hui/fidget.nvim')
-
-
+Plug('mfussenegger/nvim-lint') --linter
+Plug('neovim/nvim-lspconfig') -- lsp config
+Plug('saghen/blink.cmp') --code complete
+Plug('windwp/nvim-autopairs') -- auto insert {} and ''
 
 --code
 Plug('nvim-telescope/telescope.nvim')
-Plug('nvim-lua/plenary.nvim')
-Plug('jakemason/ouroboros')
+Plug('nmac427/guess-indent.nvim') -- identation
+Plug('nvim-lua/plenary.nvim') --better API Stuff
+Plug('jakemason/ouroboros') --header fdile finder
 
---misc
+--AI
 -- Plug('github/copilot.vim')
 Plug('zbirenbaum/copilot.lua')
 Plug('CopilotC-Nvim/CopilotChat.nvim')
-Plug('windwp/nvim-autopairs') -- auto insert {} and ''
+
+--misc
+Plug('lewis6991/gitsigns.nvim') --git
+Plug('cshuaimin/ssr.nvim') -- Search and Replace
+Plug('folke/persistence.nvim') -- Session Managment
 Plug('esensar/nvim-dev-container') -- Dev container support
+Plug('fei6409/log-highlight.nvim') -- log highlighting
+Plug('alec-gibson/nvim-tetris') --tetris ;)
+
+
+
+--Custom Plugins/local paths
 -- Plug('TheLastCD/simple-note.nvim')
---
 local local_plugin_path = vim.fn.expand('~/git/personal/simple-note.nvim')
 vim.opt.runtimepath:append(local_plugin_path)
 
