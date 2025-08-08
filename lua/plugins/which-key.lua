@@ -31,7 +31,8 @@ wk.add({
 { "<leader>z", desc = "terminal" },
 { "<leader>s", desc = "Search & Replace" },
 { "<leader>Q", desc = "persistence sessions"},
-{ "<leader>R", desc = "Registry" }
+{ "<leader>R", desc = "Registry" },
+{ "<leader>cc", desc = "Copilot" }
 
 })
 

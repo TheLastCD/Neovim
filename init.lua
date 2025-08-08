@@ -58,6 +58,9 @@ Plug('nvim-lua/plenary.nvim')
 Plug('jakemason/ouroboros')
 
 --misc
+-- Plug('github/copilot.vim')
+Plug('zbirenbaum/copilot.lua')
+Plug('CopilotC-Nvim/CopilotChat.nvim')
 Plug('windwp/nvim-autopairs') -- auto insert {} and ''
 Plug('esensar/nvim-dev-container') -- Dev container support
 -- Plug('TheLastCD/simple-note.nvim')
@@ -98,4 +101,5 @@ require("plugins.notify")
 require("plugins.autopair")
 require("plugins.wilder")
 require("plugins.notes")
+require("plugins.copilot")
 end, 100)

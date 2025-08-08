@@ -71,6 +71,7 @@ map('n', '<leader>Gd', ":Gitsigns diffthis<CR>") -- diff
 
 --Misc
 map('n', '<leader>s', ":lua require('ssr').open()<CR>") --Search and Replace
+map('n', '<leader>cc', ":CopilotChat<CR>") --open Copilot chatbot
 
 map("n", "<leader>nn", function() --toggle relative vs absolute line numbers
 	if vim.wo.relativenumber then
