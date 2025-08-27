@@ -1,7 +1,7 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 vim.opt.clipboard = "unnamedplus"
-vim.opt.number = true
+vim.opt.relativenumber = true
 vim.o.signcolumn = "yes"
 vim.opt.termguicolors = true
 
@@ -48,6 +48,7 @@ Plug("nvimtools/none-ls.nvim")
 Plug('mfussenegger/nvim-lint') --linter
 Plug('neovim/nvim-lspconfig') -- lsp config
 Plug('saghen/blink.cmp') --code complete
+Plug('echasnovski/mini.snippets') -- snippets
 Plug('windwp/nvim-autopairs') -- auto insert {} and ''
 
 --code
@@ -55,6 +56,7 @@ Plug('nvim-telescope/telescope.nvim')
 Plug('nmac427/guess-indent.nvim') -- identation
 Plug('nvim-lua/plenary.nvim') --better API Stuff
 Plug('jakemason/ouroboros') --header fdile finder
+Plug('karshPrime/tmux-compile.nvim') --custom compile setup
 
 --AI
 -- Plug('github/copilot.vim')
@@ -110,4 +112,5 @@ require("plugins.autopair")
 require("plugins.wilder")
 require("plugins.notes")
 require("plugins.copilot")
+require("plugins.compile")
 end, 100)

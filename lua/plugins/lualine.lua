@@ -7,12 +7,11 @@ require('lualine').setup {
     component_separators = { left = '', right = '' },
     section_separators = { left = '', right = '' },
     disabled_filetypes = {
-      statusline = {},
-      winbar = {},
+      "alpha", "dashboard"
     },
     ignore_focus = {},
     always_divide_middle = true,
-    always_show_tabline = true,
+    always_show_tabline = false,
     globalstatus = false,
     refresh = {
       statusline = 1000,
@@ -40,7 +39,7 @@ require('lualine').setup {
         return res:sub(1, 1)
       end,
     } },
-    lualine_b = { 'branch', 'diagnostics' },
+    lualine_b = { 'diagnostics' },
     lualine_c = { 'filename' },
     lualine_x = {},
     lualine_y = { 'fileformat', 'filetype' },

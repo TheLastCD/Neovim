@@ -40,6 +40,8 @@ map('n', '<leader>Q', ":lua require('persistence').select()<CR>") --open term
 --code
 map('n', '<leader>ch', ":Ouroboros<CR>")
 
+vim.keymap.set('n','<leader>cm', ':TMUXcompile Make<CR>', {silent=true})
+
 vim.api.nvim_set_keymap(
   'n',                 -- normal mode
   '<leader>cl',         -- key combo, e.g. leader + l
