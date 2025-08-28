@@ -1,6 +1,7 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 vim.opt.clipboard = "unnamedplus"
+vim.opt.number = true
 vim.opt.relativenumber = true
 vim.o.signcolumn = "yes"
 vim.opt.termguicolors = true
@@ -50,7 +51,8 @@ Plug('neovim/nvim-lspconfig') -- lsp config
 Plug('saghen/blink.cmp') --code complete
 Plug('echasnovski/mini.snippets') -- snippets
 Plug('windwp/nvim-autopairs') -- auto insert {} and ''
-
+Plug('dmmulroy/tsc.nvim')
+Plug('dmmulroy/ts-error-translator.nvim')
 --code
 Plug('nvim-telescope/telescope.nvim')
 Plug('nmac427/guess-indent.nvim') -- identation

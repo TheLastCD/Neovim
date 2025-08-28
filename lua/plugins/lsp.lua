@@ -31,6 +31,14 @@ for _, sign in ipairs(signs) do
   vim.fn.sign_define(sign.name, { texthl = sign.name, text = sign.text, numhl = "" })
 end
 
+require('lspconfig').ts_ls.setup {
+  init_options = {
+    preferences = {
+      disableSuggestions = false,
+    },
+    noErrorTruncation = true
+  }
+}
 
 vim.diagnostic.config({
   virtual_text = {
@@ -46,4 +54,14 @@ vim.diagnostic.config({
     border = "rounded",
   },
 })
+
+require("ts-error-translator").setup({
+  auto_override_publish_diagnostics = true,
+})
+vim.lsp.handlers["textDocument/publishDiagnostics"] = function(err, result, ctx)
+  require("ts-error-translator").translate_diagnostics(err, result, ctx)
+  vim.lsp.diagnostic.on_publish_diagnostics(err, result, ctx)
+end
+
+require('tsc').setup()
 
