@@ -40,6 +40,10 @@ map('n', '<leader>Q', ":lua require('persistence').select()<CR>") --open term
 --code
 map('n', '<leader>ch', ":Ouroboros<CR>")
 
+vim.keymap.set('n', '<leader>ce', function() --floating error msgs
+    vim.diagnostic.open_float(nil, { focus = true })
+end)
+
 vim.keymap.set('n','<leader>cm', ':TMUXcompile Make<CR>', {silent=true})
 
 vim.api.nvim_set_keymap(
@@ -68,7 +72,7 @@ vim.keymap.set('n', 'gr', function()
 end, { noremap = true, silent = true, desc = "Show LSP References (fzf-lua)" })
 
 -- Git
-map('n', '<leader>Gb', ":Gitsigns blame-line<CR>") --blame line
+map('n', '<leader>Gb', ":Gitsigns blame_line<CR>") --blame line
 map('n', '<leader>Gd', ":Gitsigns diffthis<CR>") -- diff
 
 --Misc

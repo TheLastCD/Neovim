@@ -21,6 +21,7 @@ wk.add({
 {"<leader>cf", desc = "Code Format"},
 {"<leader>cl", desc = "Code Lint"},
 {"<leader>ch", desc = "Code Goto Header"},
+{"<leader>ce", desc = "Code Error (Full)"},
 
 --Git
 {"<leader>Gb", desc = "Git Blame"},

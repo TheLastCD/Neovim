@@ -53,6 +53,7 @@ Plug('echasnovski/mini.snippets') -- snippets
 Plug('windwp/nvim-autopairs') -- auto insert {} and ''
 Plug('dmmulroy/tsc.nvim')
 Plug('dmmulroy/ts-error-translator.nvim')
+
 --code
 Plug('nvim-telescope/telescope.nvim')
 Plug('nmac427/guess-indent.nvim') -- identation
@@ -72,6 +73,7 @@ Plug('folke/persistence.nvim') -- Session Managment
 Plug('esensar/nvim-dev-container') -- Dev container support
 Plug('fei6409/log-highlight.nvim') -- log highlighting
 Plug('alec-gibson/nvim-tetris') --tetris ;)
+Plug('TheLastCD/party-parrot.nvim')
 
 
 
@@ -115,4 +117,5 @@ require("plugins.wilder")
 require("plugins.notes")
 require("plugins.copilot")
 require("plugins.compile")
+require("plugins.party")
 end, 100)
