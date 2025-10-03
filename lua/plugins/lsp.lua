@@ -1,25 +1,26 @@
 require("mason-lspconfig").setup({
-  ensure_installed = { "pyright", "lua_ls"},  -- add the servers you want
+  ensure_installed = { "pyright", "lua_ls" },
   automatic_installation = true,
   handlers = {
-    function(server_name)  -- default handler runs lspconfig setup for each server
-      require("lspconfig")[server_name].setup{}
+    function(server_name) -- default handler
+      vim.lsp.config[server_name].setup({})
     end,
   },
 })
 
-require('lspconfig').lua_ls.setup({
+vim.lsp.config.lua_ls = {
   settings = {
     Lua = {
       diagnostics = {
-        globals = { "vim" },  -- fix "undefined global vim" warning
+        globals = { "vim" },  -- fix "undefined global vim" warnings
       },
       runtime = { version = "LuaJIT" },
       workspace = { library = vim.api.nvim_get_runtime_file("", true) },
       telemetry = { enable = false },
     },
   },
-})
+}
+vim.lsp.enable("lua_ls")
 
 local signs = {
   { name = "DiagnosticSignError", text = "" },
@@ -31,14 +32,15 @@ for _, sign in ipairs(signs) do
   vim.fn.sign_define(sign.name, { texthl = sign.name, text = sign.text, numhl = "" })
 end
 
-require('lspconfig').ts_ls.setup {
+vim.lsp.config.ts_ls = {
   init_options = {
     preferences = {
       disableSuggestions = false,
     },
-    noErrorTruncation = true
-  }
+    noErrorTruncation = true,
+  },
 }
+vim.lsp.enable("ts_ls")
 
 vim.diagnostic.config({
   virtual_text = {
