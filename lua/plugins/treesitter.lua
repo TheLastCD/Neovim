@@ -18,3 +18,9 @@ require'nvim-treesitter.configs'.setup {
 		},
 	},
 }
+
+require("nvim-treesitter.configs").setup {
+  ensure_installed = { "jsonc", "lua", "javascript", "typescript"},
+  highlight = { enable = true },
+}
+
