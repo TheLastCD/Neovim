@@ -38,7 +38,7 @@ map('n', '<leader>q', ":lua require('persistence').load()<CR>") --open term
 map('n', '<leader>Q', ":lua require('persistence').select()<CR>") --open term
 
 --code
-map('n', '<leader>ch', ":Ouroboros<CR>")
+map('n', '<leader>ch', ":LspClangdSwitchSourceHeader<CR>")
 
 vim.keymap.set('n', '<leader>ce', function() --floating error msgs
     vim.diagnostic.open_float(nil, { focus = true })

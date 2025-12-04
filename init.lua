@@ -58,7 +58,6 @@ Plug('dmmulroy/ts-error-translator.nvim')
 Plug('nvim-telescope/telescope.nvim')
 Plug('nmac427/guess-indent.nvim') -- identation
 Plug('nvim-lua/plenary.nvim') --better API Stuff
-Plug('jakemason/ouroboros') --header fdile finder
 Plug('karshPrime/tmux-compile.nvim') --custom compile setup
 
 --AI
@@ -110,7 +109,6 @@ require("plugins.lualine")
 require("plugins.indent")
 require("plugins.session")
 require("plugins.conform")
-require("plugins.ouroboros")
 require("plugins.notify")
 require("plugins.autopair")
 require("plugins.wilder")
