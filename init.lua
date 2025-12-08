@@ -73,6 +73,10 @@ Plug('esensar/nvim-dev-container') -- Dev container support
 Plug('fei6409/log-highlight.nvim') -- log highlighting
 Plug('alec-gibson/nvim-tetris') --tetris ;)
 Plug('TheLastCD/party-parrot.nvim')
+Plug('folke/snacks.nvim') -- required for esp32 code
+
+--esp32/microcontroller
+Plug('Aietes/esp32.nvim')
 
 
 
@@ -116,4 +120,5 @@ require("plugins.notes")
 require("plugins.copilot")
 require("plugins.compile")
 require("plugins.party")
+require("plugins.esp")
 end, 100)
