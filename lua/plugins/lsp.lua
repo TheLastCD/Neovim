@@ -18,13 +18,13 @@ vim.lsp.config.lua_ls = {
 			workspace = { library = vim.api.nvim_get_runtime_file("", true) },
 			telemetry = { enable = false },
 		},
-		pylsp = {
-			plugins = {
-				jedi_completion = { enabled = false },
-				jedi_definition = { enabled = false },
-				jedi_hover = { enabled = false },
-			},
-		},
+		-- pylsp = {
+		-- 	plugins = {
+		-- 		jedi_completion = { enabled = false },
+		-- 		jedi_definition = { enabled = false },
+		-- 		jedi_hover = { enabled = false },
+		-- 	},
+		-- },
 	},
 }
 vim.lsp.enable("lua_ls")
