@@ -5,6 +5,10 @@ vim.opt.number = true
 vim.opt.relativenumber = true
 vim.o.signcolumn = "yes"
 vim.opt.termguicolors = true
+vim.cmd("set tabstop=8")
+vim.cmd("set softtabstop=8")
+vim.cmd("set shiftwidth=8")
+vim.cmd("set noexpandtab")
 
 -- auto install vim-plug and plugins, if not found
 local data_dir = vim.fn.stdpath('data')
@@ -41,6 +45,7 @@ Plug('ron-rs/ron.vim') --ron highlighter
 
 
 --lsp & Linting
+Plug('zenc-lang/zenc.vim')
 Plug('stevearc/conform.nvim')
 Plug('mason-org/mason.nvim')
 Plug('mason-org/mason-lspconfig.nvim')
@@ -48,6 +53,7 @@ Plug("zeioth/none-ls-autoload.nvim")
 Plug("nvimtools/none-ls.nvim")
 Plug('mfussenegger/nvim-lint') --linter
 Plug('neovim/nvim-lspconfig') -- lsp config
+Plug('saghen/blink.lib') --shared blink libs
 Plug('saghen/blink.cmp') --code complete
 Plug('echasnovski/mini.snippets') -- snippets
 Plug('windwp/nvim-autopairs') -- auto insert {} and ''
@@ -76,14 +82,14 @@ Plug('TheLastCD/party-parrot.nvim')
 Plug('folke/snacks.nvim') -- required for esp32 code
 
 --esp32/microcontroller
-Plug('Aietes/esp32.nvim')
+-- Plug('Aietes/esp32.nvim')
 
 
 
 --Custom Plugins/local paths
--- Plug('TheLastCD/simple-note.nvim')
-local local_plugin_path = vim.fn.expand('~/git/personal/simple-note.nvim')
-vim.opt.runtimepath:append(local_plugin_path)
+Plug('TheLastCD/simple-note.nvim')
+-- local local_plugin_path = vim.fn.expand('~/git/personal/simple-note.nvim')
+-- vim.opt.runtimepath:append(local_plugin_path)
 
 
 vim.call('plug#end')
@@ -97,7 +103,9 @@ require("plugins.mason")
 require("plugins.lsp")
 require("plugins.devContainer")
 
+require("plugins.treesitter")
 vim.defer_fn(function()
+vim.cmd("packadd nvim-treesitter")
 		--defer non-essential configs,
 		--purely for experimental purposes:
 		--this only makes a difference of +-10ms on initial startup
@@ -106,7 +114,6 @@ require("plugins.which-key")
 require("plugins.lint")
 require("plugins.cmp")
 require("plugins.gitsigns")
-require("plugins.treesitter")
 require("plugins.md")
 require("plugins.term")
 require("plugins.lualine")
@@ -120,5 +127,5 @@ require("plugins.notes")
 require("plugins.copilot")
 require("plugins.compile")
 require("plugins.party")
-require("plugins.esp")
+-- require("plugins.esp")
 end, 100)
