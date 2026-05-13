@@ -3,6 +3,8 @@ require("blink.cmp").setup({
 	keymap = {
 		["<Down>"] = {},
 		["<Up>"] = {},
+		['<C-k>'] = { 'select_next' },
+		['<C-j>'] = { 'select_prev' },
 	},
 	fuzzy = { implementation = "lua" },
 	cmdline = { enabled = false },
